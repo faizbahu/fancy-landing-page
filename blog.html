@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth text-lg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>StikyIckky</title>
+
+    <link rel="stylesheet" href="./css/tailwind.css" />
+  </head>
+  <body class="bg-black min-h-screen flex flex-col">
+    <header class="container mx-auto lg:sticky lg:top-0 bg-black" id="home">
+      <nav
+        id="site-menu"
+        class="bg-black lg:flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6"
+      >
+        <div
+          class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center"
+        >
+          <div class="text-white">
+            <img class="w-44 m-auto lg:m-0" src="./images/logo.svg" alt="" />
+          </div>
+          <button
+            id="menuBtn"
+            class="hamburger lg:hidden focus:outline-none flex items-center justify-center"
+            type="button"
+            onclick="navToggle();"
+          >
+            <span class="hamburger__top-bun"></span
+            ><span class="hamburger__bottom-bun"></span>
+          </button>
+        </div>
+        <div
+          id="menu"
+          class="h-screen md:h-0 space-y-3 lg:space-y-0 text-center lg:flex items-center py-3 text-white lg:space-x-6 hidden"
+        >
+          <h3
+            class="cursor-pointer border-2 font-bold px-8 py-1 rounded-xl lg:rounded-full hover:text-black hover:bg-green"
+          >
+            <a href="./index.html">HOME</a>
+          </h3>
+          <h3
+            class="cursor-pointer border-2 font-bold px-8 py-1 rounded-xl lg:rounded-full hover:text-black hover:bg-green"
+          >
+            <a href="#podcast">PODCAST</a>
+          </h3>
+          <h3
+            class="cursor-pointer border-2 font-bold px-8 py-1 rounded-xl lg:rounded-full hover:text-black hover:bg-green"
+          >
+            <a href="./blog.html">BLOG</a>
+          </h3>
+          <h3
+            class="cursor-pointer border-2 font-bold px-8 py-1 rounded-xl lg:rounded-full hover:text-black hover:bg-green"
+          >
+            <a href="#event">EVENTS</a>
+          </h3>
+          <h3
+            class="cursor-pointer border-2 font-bold px-8 py-1 rounded-xl lg:rounded-full hover:text-black hover:bg-purple"
+          >
+            <a href="#find">FIND US</a>
+          </h3>
+        </div>
+      </nav>
+    </header>
+    <section class="px-7 lg:px-0 flex-1 flex items-center justify-center">
+      <div
+        class="text-[#ff03c9] text-center text-5xl lg:text-9xl font-bold font-sans"
+      >
+        Coming<br />Soon
+      </div>
+    </section>
+    <footer class="mt-24" id="find">
+      <div class="py-7 bg-[#ff03c9]">
+        <div
+          class="text-center lg:text-left flex flex-col-reverse lg:flex-row justify-between lg:px-24"
+        >
+          <div>
+            <h1 class="mt-5 lg:mt-0 font-bold text-3xl lg:text-4xl">
+              Follow US !!
+            </h1>
+            <p class="font-bold text-lg lg:ml-12 mt-5">
+              <a target="_blank" href="https://www.instagram.com/stikyickky/">
+                <i
+                  class="fa fa-instagram font-bold mr-3 text-2xl"
+                  aria-hidden="true"
+                ></i
+                >@stiky.ickky
+              </a>
+            </p>
+            <p class="font-bold text-lg lg:ml-12">
+              <a target="_blank" href="https://www.instagram.com/stikyickky/">
+                <i
+                  class="fa fa-twitter font-bold mr-3 text-2xl"
+                  aria-hidden="true"
+                ></i
+                >@stiky.ickky
+              </a>
+            </p>
+            <div class="text-center block lg:hidden mt-5 lg:mt-0">
+              <h2 class="font-bold text-3xl">stiky.ickky@gmail.com</h2>
+              <p class="font-bold text-md mt-3 px-2 lg:px-0">
+                for any questions feel free to email me Personally
+                lilnoridesigns@gmail.com
+              </p>
+            </div>
+          </div>
+          <div class="text-center hidden lg:block">
+            <h2 class="font-bold text-3xl">stiky.ickky@gmail.com</h2>
+            <p class="font-bold text-md mt-3">
+              for any questions feel free to email me Personally
+              lilnoridesigns@gmail.com
+            </p>
+            <h3 class="text-center font-bold lg:text-md text-lg mt-20">
+              All Rights Reserved ® 2022 STiKYiCKKY
+            </h3>
+          </div>
+          <div>
+            <h2 class="font-bold text-3xl lg:text-2xl">LISTEN TO US</h2>
+            <button
+              class="bg-[#e90f0f] mt-2 border border-black font-bold px-10 py-1 rounded-xl lg:rounded-3xl text-2xl"
+            >
+              Youtube
+            </button>
+            <br />
+            <button
+              class="bg-[#00f300] mt-2 border border-black font-bold px-12 py-1 rounded-xl lg:rounded-3xl text-2xl"
+            >
+              Spotify
+            </button>
+          </div>
+        </div>
+        <h3
+          class="block lg:hidden text-center font-bold lg:text-md lg:ml-24 text-lg mt-7 lg:mt-0"
+        >
+          All Rights Reserved ® 2022 STiKYiCKKY
+        </h3>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function navToggle() {
+      var btn = document.getElementById("menuBtn");
+      var nav = document.getElementById("menu");
+      btn.classList.toggle("open");
+      nav.classList.toggle("hidden");
+    }
+  </script>
+</html>
